@@ -1,0 +1,619 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Cerebral Ops</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/dropdownmenu.css" rel="stylesheet" />
+    
+    <style>
+       /* ===========================
+           Thank You Page Specific Styles
+           =========================== */
+        .thank-you-container {
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .thank-you-wrapper {
+            max-width: 900px;
+            width: 100%;
+            background: var(--card-bg);
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .thank-you-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            padding: 4rem 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thank-you-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            animation: pulseGlow 8s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            animation: scaleIn 0.5s ease-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        .checkmark i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .thank-you-header h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .thank-you-header p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.95);
+            position: relative;
+            z-index: 1;
+        }
+
+        .thank-you-content {
+            padding: 3rem 2.5rem;
+        }
+
+        .next-steps {
+            background: var(--dark-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border-radius: 8px;
+        }
+
+        .next-steps h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .next-steps ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .next-steps li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-gray);
+        }
+
+        .next-steps li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .social-proof {
+            text-align: center;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            margin: 3rem 0;
+        }
+
+        .social-proof blockquote {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .social-proof cite {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            padding: 3rem 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 2rem;
+        }
+
+        .calendly-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        .calendly-inline-widget {
+            min-width: 320px;
+            height: 630px;
+        }
+
+        .segmentation {
+            background: var(--dark-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+        }
+
+        .segmentation h2 {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .segmentation select {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--card-bg);
+            color: var(--text-light);
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }
+
+        .segmentation select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .segmentation select:hover {
+            border-color: var(--primary-color);
+        }
+
+        .segmentation option {
+            background: var(--card-bg);
+            color: var(--text-light);
+        }
+
+        .resources {
+            margin-bottom: 3rem;
+        }
+
+        .resources h2 {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .resource-card {
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--text-light);
+            display: block;
+            background: var(--dark-bg);
+        }
+
+        .resource-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+        }
+
+        .resource-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .resource-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .thank-you-footer {
+            background: var(--dark-bg);
+            padding: 3rem 2.5rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .thank-you-footer h3 {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 0.75rem;
+            transition: transform 0.3s ease;
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.15);
+            color: var(--accent-color);
+        }
+
+        .footer-text {
+            margin-top: 2rem;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+        }
+
+        /* Responsive Design */
+        @media (max-width: 767px) {
+            .thank-you-header {
+                padding: 3rem 1.5rem;
+            }
+
+            .thank-you-header h1 {
+                font-size: 2rem;
+            }
+
+            .thank-you-header p {
+                font-size: 1rem;
+            }
+
+            .thank-you-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .cta-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            .thank-you-footer {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .checkmark {
+                width: 60px;
+                height: 60px;
+            }
+
+            .checkmark i {
+                font-size: 2rem;
+            }
+
+            .thank-you-header h1 {
+                font-size: 1.75rem;
+            }
+
+            .next-steps,
+            .segmentation {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- LinkedIn Insight Tag Placeholder -->
+    <script type="text/javascript">
+    // LinkedIn Insight Tag - Add your Partner ID below
+    _linkedin_partner_id = "YOUR_PARTNER_ID_HERE";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+    <script type="text/javascript">
+    (function(l) {
+    if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+    window.lintrk.q=[]}
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);})(window.lintrk);
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=YOUR_PARTNER_ID_HERE&fmt=gif" />
+    </noscript>
+    <!-- End LinkedIn Insight Tag -->
+
+     <!-- Navigation -->
+   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+       <div class="container">
+         <a class="navbar-brand" href="index.html">
+             <span class="brand-cerebral">Cerebral</span><span class="brand-ops">Ops</span>
+         </a>
+         <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+             <ul class="navbar-nav ms-auto">
+                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                 <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="whoweserveDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         Who We Serve
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="whoweserveDropdown">
+                         <li><a class="dropdown-item" href="Who-We-Serve.html">Who We Serve</a></li>
+                         <li><a class="dropdown-item" href="case-studies.html">Case Studies</a></li>
+                     </ul>
+                 </li>
+                 <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         Services
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                         <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                         <li><a class="dropdown-item" href="Marketing-Services.html">Marketing Services</a></li>
+                         <li><a class="dropdown-item" href="Technical-Services.html">Tech Services</a></li>
+                         <li><a class="dropdown-item" href="Ops-Services.html">Ops Services</a></li>
+                     </ul>
+                 </li>
+                 <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         About Us
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                         <li><a class="dropdown-item" href="about.html">The Team</a></li>
+                         <li><a class="dropdown-item" href="Why-Cerebral-Ops.html">Why Cerebral Ops</a></li>
+                         <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                     </ul>
+                 </li>
+                 <li class="nav-item"><a class="nav-link" href="https://blog.CerebralOps.in">Blog</a></li>
+             </ul>
+         </div>-->
+     </div>
+ </nav>
+    <div class="thank-you-container">
+        <div class="thank-you-wrapper">
+            <div class="thank-you-header">
+                <div class="checkmark">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h1>You're All Set! 🎉</h1>
+                <p>Your resource is on its way to your inbox</p>
+            </div>
+            
+            <div class="thank-you-content">
+                <div class="next-steps">
+                    <h2>What Happens Next?</h2>
+                    <ul>
+                        <li>Check your email inbox (it should arrive within 5 minutes)</li>
+                        <li>If you don't see it, check your spam folder</li>
+                        <li>Download and review your resource</li>
+                        <li>Have questions? We're here to help - book a call below</li>
+                    </ul>
+                </div>
+                
+                <div class="social-proof">
+                    <blockquote>
+                        "Cerebral Ops helped us identify and fix the bottlenecks in our growth funnel. Within 3 months, we saw a 40% increase in qualified leads."
+                    </blockquote>
+                    <cite>— Founder, B2B SaaS Startup</cite>
+                </div>
+                
+                <div class="cta-section">
+                    <h2>Ready to Accelerate Your Growth?</h2>
+                    <p>Let's discuss how Cerebral Ops can help solve your specific growth challenges. Book a free 30-minute strategy call below.</p>
+                    
+                    <div class="calendly-container">
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/deepjanardhanan/30min?hide_gdpr_banner=1&background_color=ffffff&text_color=333333&primary_color=2563eb"></div>
+                    </div>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                </div>
+                
+                <div class="segmentation">
+                    <h2>Help us serve you better</h2>
+                    <select id="challenge-select" onchange="trackChallenge(this.value)">
+                        <option value="">What's your biggest challenge right now?</option>
+                        <option value="lead-generation">Generating quality leads</option>
+                        <option value="conversion">Converting leads to customers</option>
+                        <option value="scaling-operations">Scaling operations efficiently</option>
+                        <option value="marketing-strategy">Developing effective marketing strategy</option>
+                        <option value="technology-implementation">Implementing the right technology</option>
+                        <option value="team-building">Building and managing team</option>
+                        <option value="other">Something else</option>
+                    </select>
+                </div>
+                
+                <div class="resources">
+                    <h2>Continue Learning</h2>
+                    <div class="resource-grid">
+                        <a href="https://blog.cerebralops.in/" class="resource-card">
+                            <h3>📚 Growth Insights Blog</h3>
+                            <p>Practical strategies and case studies on scaling startups</p>
+                        </a>
+                        <a href="https://cerebralops.in/case-studies" class="resource-card">
+                            <h3>📊 Case Studies</h3>
+                            <p>See how we've helped businesses like yours achieve results</p>
+                        </a>
+                        <a href="https://blog.cerebralops.in/resources" class="resource-card">
+                            <h3>🎯 Free Resources</h3>
+                            <p>Templates, guides, and tools to accelerate your growth</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="thank-you-footer">
+                <h3>Get in Touch</h3>
+                <div class="contact-info">
+                    <a href="mailto:hello@cerebralops.in">hello@cerebralops.in</a>
+                    <a href="https://cerebralops.in">cerebralops.in</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://linkedin.com/company/cerebral-ops/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <p class="footer-text">
+                    © 2025 Cerebral Ops. Helping startups and small businesses resolve growth problems through technology, marketing, and operations solutions.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function trackChallenge(challenge) {
+            if (challenge) {
+                // Track the selection
+                console.log('User challenge:', challenge);
+                
+                // You can add your analytics tracking here
+                // For example: gtag('event', 'challenge_selected', {'challenge': challenge});
+                
+                // Store in localStorage for potential follow-up
+                localStorage.setItem('userChallenge', challenge);
+                
+                // Optional: Send to your backend
+                // fetch('/api/track-challenge', {
+                //     method: 'POST',
+                //     headers: {'Content-Type': 'application/json'},
+                //     body: JSON.stringify({challenge: challenge})
+                // });
+                
+                // Show visual confirmation
+                const select = document.getElementById('challenge-select');
+                select.style.borderColor = 'var(--primary-color)';
+                setTimeout(() => {
+                    select.style.borderColor = 'var(--border-color)';
+                }, 1000);
+            }
+        }
+    </script>
+</body>
+</html>

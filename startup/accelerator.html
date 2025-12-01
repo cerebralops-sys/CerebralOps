@@ -1,0 +1,952 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerebral Ops Growth Accelerator - Application</title>
+      <script src="../components/header.js" type="text/javascript"></script>
+
+
+   
+    <style>
+        .accelerator-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .accelerator-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+            .accelerator-header h1 {
+                font-size: 2.5em;
+                margin-bottom: 10px;
+                color: #2c3e50;
+            }
+
+            .accelerator-header .subtitle {
+                font-size: 1.2em;
+                color: #7f8c8d;
+            }
+
+        .intro-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border-left: 4px solid #3498db;
+        }
+
+            .intro-section h2 {
+                margin-top: 0;
+                color: #2c3e50;
+            }
+
+        .focus-areas {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+            .focus-areas h3 {
+                color: #2c3e50;
+                margin-top: 0;
+            }
+
+        .checkbox-group {
+            margin: 20px 0;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 15px 0;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+            .checkbox-item:hover {
+                background: #e9ecef;
+            }
+
+            .checkbox-item input[type="checkbox"] {
+                margin-right: 12px;
+                margin-top: 4px;
+                width: 18px;
+                height: 18px;
+                cursor: pointer;
+            }
+
+            .checkbox-item label {
+                cursor: pointer;
+                flex: 1;
+                font-size: 1.05em;
+            }
+
+        .required-star {
+            color: #e74c3c;
+            margin-left: 4px;
+        }
+
+        .not-fit-section {
+            background: #fff3cd;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #ffc107;
+        }
+
+            .not-fit-section h3 {
+                color: #856404;
+                margin-top: 0;
+            }
+
+            .not-fit-section ul {
+                margin: 10px 0;
+                padding-left: 25px;
+            }
+
+            .not-fit-section li {
+                margin: 8px 0;
+                color: #856404;
+            }
+
+        .form-section {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+            .form-section h3 {
+                color: #2c3e50;
+                margin-top: 0;
+                margin-bottom: 30px;
+                font-size: 1.8em;
+            }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: 600;
+                color: #2c3e50;
+            }
+
+            .form-group input[type="text"],
+            .form-group input[type="email"],
+            .form-group input[type="tel"],
+            .form-group input[type="url"],
+            .form-group select,
+            .form-group textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                font-size: 1em;
+                font-family: inherit;
+                box-sizing: border-box;
+            }
+
+            .form-group textarea {
+                min-height: 120px;
+                resize: vertical;
+            }
+
+            .form-group small {
+                display: block;
+                margin-top: 5px;
+                color: #7f8c8d;
+            }
+
+        .word-counter {
+            text-align: right;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+
+            .word-counter.warning {
+                color: #e67e22;
+            }
+
+            .word-counter.error {
+                color: #e74c3c;
+                font-weight: bold;
+            }
+
+        .agreement-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 4px;
+            margin: 30px 0;
+            border: 2px solid #dee2e6;
+        }
+
+            .agreement-box label {
+                display: flex;
+                align-items: flex-start;
+                cursor: pointer;
+            }
+
+            .agreement-box input[type="checkbox"] {
+                margin-right: 12px;
+                margin-top: 4px;
+                width: 18px;
+                height: 18px;
+                cursor: pointer;
+            }
+
+        .submit-btn {
+            background: #3498db;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+            .submit-btn:hover {
+                background: #2980b9;
+            }
+
+            .submit-btn:disabled {
+                background: #95a5a6;
+                cursor: not-allowed;
+            }
+
+        .success-message {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border: 1px solid #c3e6cb;
+            text-align: center;
+        }
+
+            .success-message h3 {
+                margin-top: 0;
+                color: #155724;
+            }
+
+        .cta-placeholder {
+            background: #e9ecef;
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 30px;
+            border: 2px dashed #adb5bd;
+        }
+
+            .cta-placeholder p {
+                color: #6c757d;
+                font-style: italic;
+            }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            border: 1px solid #f5c6cb;
+            display: none;
+        }
+
+        .field-error {
+            color: #e74c3c;
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .input-error {
+            border-color: #e74c3c !important;
+        }
+
+
+        /* Additional CTA-specific styles */
+        .revops-cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .revops-cta-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .revops-cta-card {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .revops-cta-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 6px;
+                background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+            }
+
+        .revops-badge {
+            display: inline-block;
+            background: #e7f9f0;
+            color: #28a745;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 0.9em;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .revops-headline {
+            font-size: 2.8em;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 20px 0;
+            color: #2c3e50;
+        }
+
+        .revops-subheadline {
+            font-size: 1.3em;
+            line-height: 1.6;
+            margin: 25px auto 40px;
+            max-width: 900px;
+            color: #5a6c7d;
+        }
+
+        .revops-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 50px 0;
+            text-align: left;
+        }
+
+        .revops-feature-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #28a745;
+            transition: all 0.3s ease;
+        }
+
+            .revops-feature-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(40, 167, 69, 0.15);
+                background: #e7f9f0;
+            }
+
+        .revops-feature-icon {
+            font-size: 2em;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .revops-feature-text {
+            font-size: 1.05em;
+            line-height: 1.5;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .revops-cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0 40px;
+            flex-wrap: wrap;
+        }
+
+        .revops-btn-primary {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.2em;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .revops-btn-primary::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.2);
+                transform: translate(-50%, -50%);
+                transition: width 0.6s, height 0.6s;
+            }
+
+            .revops-btn-primary:hover::before {
+                width: 300px;
+                height: 300px;
+            }
+
+            .revops-btn-primary:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 15px 40px rgba(40, 167, 69, 0.4);
+            }
+
+            .revops-btn-primary span {
+                position: relative;
+                z-index: 1;
+            }
+
+        .revops-btn-secondary {
+            background: white;
+            color: #28a745;
+            padding: 20px 50px;
+            font-size: 1.1em;
+            font-weight: 600;
+            border: 2px solid #28a745;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+            .revops-btn-secondary:hover {
+                background: #e7f9f0;
+                transform: translateY(-3px);
+                box-shadow: 0 10px 20px rgba(40, 167, 69, 0.15);
+            }
+
+        .revops-trust-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 45px;
+            padding-top: 35px;
+            border-top: 1px solid #e9ecef;
+            flex-wrap: wrap;
+        }
+
+        .revops-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95em;
+            color: #5a6c7d;
+        }
+
+        .revops-trust-icon {
+            color: #28a745;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .revops-cta-card {
+                padding: 40px 25px;
+            }
+
+            .revops-headline {
+                font-size: 2em;
+            }
+
+            .revops-subheadline {
+                font-size: 1.1em;
+            }
+
+            .revops-features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .revops-cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .revops-btn-primary,
+            .revops-btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+
+            .revops-trust-bar {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation-->
+ <div id="header"></div>
+
+    <div class="accelerator-container">
+        <div class="accelerator-header">
+            <h1>Cerebral Ops Growth Accelerator</h1>
+            <p class="subtitle">COGA - Empowering Startups to Scale</p>
+        </div>
+
+        <div class="intro-section">
+            <h2>Welcome to COGA!</h2>
+            <p>We're excited that you're interested in the Cerebral Ops Growth Accelerator (COGA)! This program is our commitment to giving back to the startup community and building a stronger, more collaborative entrepreneurial ecosystem.</p>
+
+            <p>At Cerebral Ops, we believe that when startups succeed, entire communities thrive. That's why we're offering hands-on strategic consulting to help promising ventures break through their growth barriers. Through COGA, we're not just sharing expertise—we're fostering a network of founders who support each other, share learnings, and lift the entire startup ecosystem.</p>
+
+            <p>By participating in this program, you'll gain actionable insights to accelerate your growth while becoming part of a community dedicated to mutual success. Together, we'll tackle your toughest challenges and create momentum that lasts long after our engagement ends.</p>
+        </div>
+
+        <div class="focus-areas">
+            <h3>What We Focus On</h3>
+            <p>Our expertise spans across four critical growth areas:</p>
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="focus1" disabled checked>
+                    <label for="focus1">✓ Growth marketing & customer acquisition</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="focus2" disabled checked>
+                    <label for="focus2">✓ Tech stack optimization & automation</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="focus3" disabled checked>
+                    <label for="focus3">✓ Operations & workflow efficiency</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="focus4" disabled checked>
+                    <label for="focus4">✓ Product-market fit refinement</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="focus-areas">
+            <h3>We Can Help You If <span class="required-star">*</span></h3>
+            <div class="error-message" id="errorMessage2"></div>
+            <p>Please confirm that the following statements apply to you (all required):</p>
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="req1" required>
+                    <label for="req1">This is your full-time work</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="req2" required>
+                    <label for="req2">You are post-revenue with some traction</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="req3" required>
+                    <label for="req3">You are stuck on a specific growth challenge</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="req4" required>
+                    <label for="req4">You are ready to execute on recommendations</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="req5" required>
+                    <label for="req5">You are willing to share results publicly</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="req6" required>
+                    <label for="req6">You are willing to extend a helping hand to others in the community</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="not-fit-section">
+            <h3>Not a Good Fit If:</h3>
+            <ul>
+                <li>You are only doing this part-time</li>
+                <li>You're pre-product or pre-revenue</li>
+                <li>You want someone to do the work for you (we guide, you execute)</li>
+                <li>You can't commit 5-10 hours/month to this</li>
+            </ul>
+            <div class="agreement-box">
+                <label>
+                    <input type="checkbox" id="notFitAgreement" required>
+                    <span>I understand and agree that COGA may not be the right fit if any of the above conditions apply to me <span class="required-star">*</span></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h3>Application Form</h3>
+            <p>Please answer the following questions to help us understand your startup better:</p>
+
+            <div class="error-message" id="errorMessage"></div>
+
+            <form id="cogaForm" action="../send.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name <span class="required-star">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Official Email <span class="required-star">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Your Phone Number <span class="required-star">*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn Profile URL <span class="required-star">*</span></label>
+                    <input type="url" id="linkedin" required>
+                    <small>Please enter your full LinkedIn profile URL (e.g., https://www.linkedin.com/in/yourname)</small>
+                    <div class="field-error" id="linkedinError">Please enter a valid LinkedIn profile URL (e.g., https://www.linkedin.com/in/yourname)</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="source">How did you hear about this opportunity? <span class="required-star">*</span></label>
+                    <input type="text" id="source" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company Name and Website <span class="required-star">*</span></label>
+                    <input type="text" id="company" required>
+                    <small>e.g., Acme Corp - https://acmecorp.com</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">What does your company do? (1 sentence) <span class="required-star">*</span></label>
+                    <input type="text" id="description" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="revenue">Current Monthly Revenue Range <span class="required-star">*</span></label>
+                    <select id="revenue" required>
+                        <option value="">Select revenue range</option>
+                        <option value="Pre-revenue">Pre-revenue</option>
+                        <option value="<$5K">Less than $5K</option>
+                        <option value="$5-20K">$5K - $20K</option>
+                        <option value="$20K+">$20K+</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="challenge">What's your biggest growth challenge right now? <span class="required-star">*</span></label>
+                    <textarea id="challenge" required></textarea>
+                    <div class="word-counter" id="challengeCounter">0 / 150 words</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="tried">What have you already tried to solve this? <span class="required-star">*</span></label>
+                    <textarea id="tried" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="outcome">If we solve this problem, what specific outcome would you see in 8 weeks? <span class="required-star">*</span></label>
+                    <textarea id="outcome" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="hours">How many hours per week can you dedicate to implementing recommendations? <span class="required-star">*</span></label>
+                    <input type="text" id="hours" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="caseStudy">Are you willing to be featured as a case study with real results/metrics? <span class="required-star">*</span></label>
+                    <select id="caseStudy" required>
+                        <option value="">Please select</option>
+                        <option value="Yes">Yes, absolutely</option>
+                        <option value="Yes with conditions">Yes, with some conditions</option>
+                        <option value="Maybe">Maybe, let's discuss</option>
+                        <option value="No">No, I prefer to keep it private</option>
+                    </select>
+                </div>
+
+                <!-- Hidden fields for form submission -->
+                <input type="hidden" id="hiddenName" name="name">
+                <input type="hidden" id="hiddenEmail" name="email">
+                <input type="hidden" id="hiddenPhone" name="phone">
+                <input type="hidden" id="hiddenSubject" name="subject" />
+                <input type="hidden" id="hiddenContent" name="emailcontent">
+
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+
+            <div class="success-message" id="successMessage">
+                <h3>Thank You for Your Application!</h3>
+                <p>We have received your application and will review it carefully. We appreciate your interest in the Cerebral Ops Growth Accelerator.</p>
+                <p><strong>We will be in touch within the next 2-3 business days.</strong></p>
+                <p>In the meantime, feel free to explore more about us at <a href="https://cerebralops.in">cerebralops.in</a></p>
+            </div>
+
+
+        </div>
+        <!-- RevOps CTA Section -->
+        <section class="revops-cta-section">
+            <div class="revops-cta-container">
+                <div class="revops-cta-card">
+                    <div class="revops-badge">For $1M–$15M ARR B2B SaaS Companies</div>
+
+                    <h2 class="revops-headline">Turn Your RevOps Into a Revenue-Generating Machine</h2>
+
+                    <p class="revops-subheadline">
+                        90-day AI & automation rebuild for B2B SaaS companies. Start with a complimentary efficiency audit.
+                    </p>
+
+                    <div class="revops-features-grid">
+                        <div class="revops-feature-card">
+                            <span class="revops-feature-icon">🎯</span>
+                            <div class="revops-feature-text">Identify hidden revenue leaks</div>
+                        </div>
+                        <div class="revops-feature-card">
+                            <span class="revops-feature-icon">⚡</span>
+                            <div class="revops-feature-text">Eliminate operational bottlenecks</div>
+                        </div>
+                        <div class="revops-feature-card">
+                            <span class="revops-feature-icon">🤖</span>
+                            <div class="revops-feature-text">Build AI-powered growth systems</div>
+                        </div>
+                        <div class="revops-feature-card">
+                            <span class="revops-feature-icon">🚀</span>
+                            <div class="revops-feature-text">90-day complete transformation</div>
+                        </div>
+                    </div>
+
+                    <div class="revops-cta-buttons">
+                        <a href="#contact" class="revops-btn-primary">
+                            <span>Start My 90-Day Rebuild</span>
+                        </a>
+                        <a href="#how-it-works" class="revops-btn-secondary">See How It Works</a>
+                    </div>
+
+                    <div class="revops-trust-bar">
+                        <div class="revops-trust-item">
+                            <span class="revops-trust-icon">✓</span>
+                            <span>Trusted by 50+ scaling SaaS companies</span>
+                        </div>
+                        <div class="revops-trust-item">
+                            <span class="revops-trust-icon">✓</span>
+                            <span>Free efficiency audit included</span>
+                        </div>
+                        <div class="revops-trust-item">
+                            <span class="revops-trust-icon">✓</span>
+                            <span>Limited to 3 companies per quarter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // Word counter for challenge field
+        const challengeField = document.getElementById('challenge');
+        const challengeCounter = document.getElementById('challengeCounter');
+
+        challengeField.addEventListener('input', function() {
+            const text = this.value.trim();
+            const words = text === '' ? 0 : text.split(/\s+/).length;
+            challengeCounter.textContent = words + ' / 150 words';
+
+            if (words > 150) {
+                challengeCounter.classList.add('error');
+                challengeCounter.classList.remove('warning');
+            } else if (words > 140) {
+                challengeCounter.classList.add('warning');
+                challengeCounter.classList.remove('error');
+            } else {
+                challengeCounter.classList.remove('warning', 'error');
+            }
+        });
+
+        // LinkedIn URL validation
+        const linkedinField = document.getElementById('linkedin');
+        const linkedinError = document.getElementById('linkedinError');
+
+        linkedinField.addEventListener('input', function() {
+            const url = this.value.trim();
+            if (url && !url.match(/^https?:\/\/(www\.)?linkedin\.com\/in\/.+/i)) {
+                linkedinError.style.display = 'block';
+                this.classList.add('input-error');
+            } else {
+                linkedinError.style.display = 'none';
+                this.classList.remove('input-error');
+            }
+        });
+
+        linkedinField.addEventListener('blur', function() {
+            const url = this.value.trim();
+            if (url && !url.match(/^https?:\/\/(www\.)?linkedin\.com\/in\/.+/i)) {
+                linkedinError.style.display = 'block';
+                this.classList.add('input-error');
+            }
+        });
+
+        // Form submission
+        document.getElementById('cogaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const errorMessage = document.getElementById('errorMessage');
+            errorMessage.style.display = 'none';
+            errorMessage2.style.display = 'none';
+
+            // Check all required checkboxes in "We Can Help You If" section
+            const requiredChecks = ['req1', 'req2', 'req3', 'req4', 'req5', 'req6'];
+            const allChecked = requiredChecks.every(id => document.getElementById(id).checked);
+
+            if (!allChecked) {
+                errorMessage2.textContent = 'Please confirm all the required statements in the "We Can Help You If" section before submitting.';
+                errorMessage2.style.display = 'block';
+                document.getElementById('req1').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return false;
+            }
+
+            // Check "Not a Good Fit" agreement
+            if (!document.getElementById('notFitAgreement').checked) {
+                errorMessage.textContent = 'Please confirm that you understand the "Not a Good Fit" conditions.';
+                errorMessage.style.display = 'block';
+                document.getElementById('notFitAgreement').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return false;
+            }
+
+            // Validate word count
+            const challengeText = document.getElementById('challenge').value.trim();
+            const wordCount = challengeText === '' ? 0 : challengeText.split(/\s+/).length;
+            if (wordCount > 150) {
+                errorMessage.textContent = 'Please reduce your growth challenge description to 150 words or less.';
+                errorMessage.style.display = 'block';
+                document.getElementById('challenge').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return false;
+            }
+
+            // Validate LinkedIn URL
+            const linkedinUrl = document.getElementById('linkedin').value.trim();
+            if (!linkedinUrl.match(/^https?:\/\/(www\.)?linkedin\.com\/in\/.+/i)) {
+                errorMessage.textContent = 'Please enter a valid LinkedIn profile URL.';
+                errorMessage.style.display = 'block';
+                document.getElementById('linkedin').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return false;
+            }
+
+            // Populate hidden fields
+            document.getElementById('hiddenName').value = document.getElementById('name').value;
+            document.getElementById('hiddenEmail').value = document.getElementById('email').value;
+            document.getElementById('hiddenPhone').value = document.getElementById('phone').value;
+            document.getElementById('hiddenSubject').value = 'Startup Accelerator Application';
+            // Create email content string
+            let emailContent = 'Startup Accelerator Application: ' + '<br />';
+            emailContent += 'Name: ' + document.getElementById('name').value + '<br />';
+            emailContent += 'Email: ' + document.getElementById('email').value + '<br />';
+            emailContent += 'LinkedIn: ' + linkedinUrl + '<br />';
+            emailContent += 'Source: ' + document.getElementById('source').value + '<br />';
+            emailContent += 'Company: ' + document.getElementById('company').value + '<br />';
+            emailContent += 'Description: ' + document.getElementById('description').value + '<br />';
+            emailContent += 'Revenue: ' + document.getElementById('revenue').value + '<br />';
+            emailContent += 'Challenge: ' + challengeText + '<br />';
+            emailContent += 'Tried: ' + document.getElementById('tried').value + '<br />';
+            emailContent += 'Outcome: ' + document.getElementById('outcome').value + '<br />';
+            emailContent += 'Hours: ' + document.getElementById('hours').value + '<br />';
+            emailContent += 'Case Study: ' + document.getElementById('caseStudy').value + '<br />';
+
+            // Add checkbox confirmations
+            emailContent += '--- Confirmations ---\n'+ '<br />';
+            emailContent += 'Full-time work: Yes\n'+ '<br />';
+            emailContent += 'Post-revenue: Yes\n'+ '<br />';
+            emailContent += 'Stuck on growth challenge: Yes\n'+ '<br />';
+            emailContent += 'Ready to execute: Yes\n'+ '<br />';
+            emailContent += 'Willing to share results: Yes\n'+ '<br />';
+            emailContent += 'Willing to help others: Yes\n'+ '<br />';
+            emailContent += 'Understands fit criteria: Yes\n'+ '<br />';
+
+            document.getElementById('hiddenContent').value = emailContent;
+
+            // Show success message and hide form
+            document.getElementById('cogaForm').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+
+            // Scroll to success message
+            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // Submit the form (comment out for testing)
+            this.submit();
+
+            return false;
+        });
+    </script>
+
+    <script type="text/javascript">
+      var urlstring = window.location.href;
+      var url = new URL(urlstring);
+      var status = url.searchParams.get("status");
+      if (status == 'emailed') {
+        //  alert(status);
+          console.log(status);
+
+    // Show success message and hide form
+    document.getElementById('cogaForm').style.display = 'none';
+    document.getElementById('successMessage').style.display = 'block';
+
+    // Scroll to success message
+    document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      }
+    </script>
+    <link rel="stylesheet" href="https://cerebralops.in/css/style.css">
+    <!-- footer -->
+<div id="footer"></div>
+
+<script>
+    fetch('/components/header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header').innerHTML = data)
+        .catch(err => console.error('Nav Header load failed:', err));
+
+    fetch('/components/footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer').innerHTML = data)
+        .catch(err => console.error('Footer load failed:', err));
+
+</script>
+   
+     <!--Bootstrap JS-- >
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<!--jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  
+<!-- Custom JS -->
+<script src="../js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,1241 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0ZTBWY6JYC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0ZTBWY6JYC');
+    </script>
+
+    <title>RevOps Audit + 90-Day Rebuild | Cerebral Ops</title>
+    <meta name="description" content="Fix your revenue leaks and build a clean GTM system in 90 days. RevOps Audit and execution for B2B SaaS and ecommerce.">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://cerebralops.in/#org",
+              "name": "Cerebral Ops",
+              "url": "https://cerebralops.in",
+              "logo": "https://cerebralops.in/images/cerebralops-logo.png",
+              "description": "Revenue Operations consulting for B2B SaaS, tech-enabled services, and ecommerce companies. We build revops systems that generate predictable growth.",
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "email": "hello@cerebralops.in",
+                  "contactType": "sales",
+                  "areaServed": ["US", "UK", "EU"],
+                  "availableLanguage": ["en"]
+                }
+              ],
+              "sameAs": [
+                "https://www.linkedin.com/company/cerebral-ops/",
+                "https://twitter.com/cerebralops"
+              ]
+            },
+
+            {
+              "@type": "Service",
+              "@id": "https://cerebralops.in/#revops-service",
+              "serviceType": "RevOps Audit + 90-Day RevOps Rebuild",
+              "provider": {
+                "@id": "https://cerebralops.in/#org"
+              },
+              "areaServed": ["US", "UK", "EU"],
+              "audience": [
+                { "@type": "Audience", "audienceType": "B2B SaaS founders & CEOs" },
+                { "@type": "Audience", "audienceType": "COOs & Operations leaders" },
+                { "@type": "Audience", "audienceType": "CROs, VP Sales/Marketing" }
+              ],
+              "description": "A 45-minute RevOps audit followed by a 90-day systems rebuild to fix leaky funnels, tool sprawl, attribution blind spots, and slow revenue cycles. Outcomes: cleaner data, predictable forecasting, faster revenue.",
+              "offers": {
+                "@type": "Offer",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "Custom",
+                  "priceCurrency": "USD"
+                },
+                "availability": "https://schema.org/InStock",
+                "url": "https://cerebralops.in#lead-form"
+              }
+            },
+
+            {
+              "@type": "WebSite",
+              "@id": "https://cerebralops.in/#website",
+              "url": "https://cerebralops.in",
+              "name": "Cerebral Ops",
+              "publisher": { "@id": "https://cerebralops.in/#org" },
+              "inLanguage": "en",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://cerebralops.in/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            },
+
+            {
+              "@type": "FAQPage",
+              "@id": "https://cerebralops.in/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Do we need to give CRM access before the call?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Our audit uses screenshots and summary data only. GDPR/CCPA safe."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do you support HubSpot, Salesforce, or Klaviyo?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. The framework is tool-agnostic. We install standards first—tools second."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What happens after the audit?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You receive a summary memo, friction map, and roadmap. If we're not a fit, you keep all findings with zero obligation."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What if we already tried revops before?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most failed attempts lacked execution. We focus on implementation and measurable progress during sprints."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How do success metrics work?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We align success metrics before kickoff and track them weekly with your GTM leads."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+    </script>
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+   <!--<link href="../css/style.css" rel="stylesheet" />-->
+    <link href="revops-audit.css" rel="stylesheet" />
+
+
+</head>
+<body>
+
+    <div class="outercontainer">
+        <div class="centered-div">
+
+            <!-- ===========================
+                 STICKY CTA (HIDDEN INITIALLY)
+            ============================ -->
+            <div class="sticky-cta d-none">
+                <span>Your RevOps will not fix itself.</span>
+                <button data-scroll="#lead-form" class="btn btn-primary">Book Your RevOps Audit</button>
+            </div>
+
+            <section id="done-section1" class="section  success-message">
+                <div>
+                    <div class="innercontainer">
+                        <i class="fas fa-check-cicle"></i>
+                        <h4> Your message is on its way! </h4>
+                        <p>
+                            Hi, Your message is on it's way to us. We respond to all messages within 2 business days!
+                        </p>
+                        <p>
+                            Note:If you haven't heard back from us by Day #3, something has drastically gone wrong!
+                        </p>
+                        <p>
+                            Ok, just kidding! But, on the off-chance that we actually missed your message;
+                            please do intimate us and we will take care of you!
+                        </p>
+                        <p>
+                            And we'll throw in something extra for your troubles!
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===========================
+                 HERO SECTION
+            ============================ -->
+            <section id="hero" class="hero-section">
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="row align-items-center min-vh-90">
+                        <h1 data-ab="h1a">If growth feels harder than it should, your RevOps is sending a signal.</h1>
+
+                        <div class="d-none" data-ab="h1b">45 minutes to locate the friction. 90 days to remove it.</div>
+
+                        <div class="d-none" data-ab="h1c">Turn tool sprawl and messy handoffs into a clean, revenue-running machine.</div>
+
+                        <div class="d-none" data-ab="h1d">Stop guessing which system is killing revenue—fix it systematically.</div>
+                        <p>&nbsp;</p>
+                        <p data-ab="sub1">
+                            Your CRM already knows what's slowing revenue — it just isn’t talking clearly.
+
+                        </p>
+
+                        <div data-ab="sub2">
+                            Most teams already know the problems — slow pipeline, tool chaos, bad data.
+                            What they don’t have is a system to fix it. That's what we build in 90 days.
+                        </div>
+                        <p>&nbsp;</p>
+                        <div class="d-none" data-ab="sub3">
+                            Revenue shouldn’t depend on heroic efforts.
+                            We rebuild your RevOps so your team can execute with speed, clarity, and consistency.
+                        </div>
+
+                        <p>   Our RevOps Audit and 90-Day Rebuild turn scattered tools and processes into a repeatable revenue system.</p>
+
+                        <button data-scroll="#lead-form" data-track="hero-cta" class="btn btn-primary hero-cta-btn">
+                            Book Your RevOps Audit
+                        </button>
+
+                        <button data-scroll="#lead-form" data-track="hero-cta-b" class="btn btn-primary hero-cta-btn d-none">
+                            Diagnose My Revenue Engine
+                        </button>
+
+                        <button data-scroll="#lead-form" data-track="hero-cta-c" class="btn btn-primary hero-cta-btn d-none">
+                            See the 90-Day RevOps Plan
+                        </button>
+                        <p class="text-light mt-3">
+                            If we’re not a fit after the audit, you keep the roadmap. No obligation.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ===========================
+                 TRUST BAR (LOGOS)
+            ============================ -->
+            <!--<section id="trust-bar" class="trust-bar">-->
+            <!-- [[CLIENT_LOGOS_HTML]] or hide via JS -->
+            <!--</section>-->
+            <!-- ===========================
+                 PERSONA SWITCHER
+            ============================ -->
+            <section id="personas">
+                <div class="persona-tabs container">
+                    <div class="tab-controls d-flex gap-2">
+                        <button class="tab-btn active" data-target="founder">Founder / CEO</button>
+                        <button class="tab-btn" data-target="coo">COO / Operations</button>
+                        <button class="tab-btn" data-target="cro">CRO / GTM Leaders</button>
+                    </div>
+
+                    <div id="founder" class="persona-content active">
+                        <h3>For Founders & CEOs</h3>
+                        <p>Revenue feels possible — but growth keeps stalling. Something is slowing execution, but it isn’t strategy.</p>
+                        <ul>
+                            <li>CRM data you can’t trust</li>
+                            <li>Sales cycle keeps expanding</li>
+                            <li>Every metric feels like a “best guess”</li>
+                            <li>Marketing vs Sales finger pointing</li>
+                            <li>Hard to make hiring / spend decisions</li>
+                        </ul>
+                        <p><strong>What changes:</strong></p>
+                        <ul>
+                            <li>Command of every revenue motion</li>
+                            <li>Faster GTM execution (weeks, not quarters)</li>
+                            <li>Clear funnel → clear forecasts → clear decisions</li>
+                            <li>Finally see what’s working — and what isn’t</li>
+                        </ul>
+                    </div>
+
+
+                    <div id="coo" class="persona-content">
+                        <h3>For COOs & Operations Leaders</h3>
+                        <p>You own process, but spend your time firefighting. Handoffs are murky, definitions unclear, and tools don’t follow the playbook.</p>
+                        <ul>
+                            <li>Inconsistent pipeline stages</li>
+                            <li>Lead routing confusion</li>
+                            <li>Undefined lifecycle & MQL → SQL process</li>
+                            <li>Sales reps bypassing the CRM</li>
+                            <li>Too many tools, not enough operational clarity</li>
+                        </ul>
+                        <p><strong>What changes:</strong></p>
+                        <ul>
+                            <li>Standardized pipeline & lifecycle definitions</li>
+                            <li>SLA enforcement + proper rep enablement</li>
+                            <li>Cleaner data without manual chasing</li>
+                            <li>A tech stack that actually supports execution</li>
+                        </ul>
+                    </div>
+
+                    <div id="cro" class="persona-content">
+                        <h3>For CROs, Heads of GTM & Growth</h3>
+                        <p>You already feel where revenue is leaking — attribution, handoffs, funnel hygiene. What’s missing is ownership and execution bandwidth.</p>
+                        <ul>
+                            <li>Rep-dependent data quality</li>
+                            <li>Attribution: always a debate</li>
+                            <li>Forecasts impossible to defend</li>
+                            <li>CS health signals ignored</li>
+                            <li>Pipelines grow, conversion doesn’t</li>
+                        </ul>
+                        <p><strong>What changes:</strong></p>
+                        <ul>
+                            <li>Lifecycle visibility across GTM</li>
+                            <li>Dashboard sanity: “what’s actually working?”</li>
+                            <li>Lead scoring & expansion signals surfaced</li>
+                            <li>A revenue engine you can finally predict</li>
+                        </ul>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <div class="textcenter mt-3">
+                            <button class="btn btn-outline-primary" data-scroll="#lead-form" data-track="persona-cta">
+                                Show Me the RevOps Audit
+                            </button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+
+
+
+            <!-- ===========================
+                 PROBLEM → AGITATION → VISION
+            ============================ -->
+            <section id="pain" class="pain-section">
+                <div>
+                    <div class="pav-section container">
+                        <h2>Why Growth Feels Harder Than It Should</h2>
+
+                        <p>
+                            Your team is working hard. Your tools are expensive. Your strategy makes sense.
+                            So why does growth still feel like a drag instead of momentum?
+                        </p>
+
+                        <p>
+                            Here’s the pattern we see across B2B SaaS & ecommerce teams:
+                            <em>the problems aren't invisible — they're hidden inside your systems.</em>
+                            Leads fall through cracks. Stages are unclear. Data can’t be trusted.
+                            Everybody feels the drag, nobody owns the fix.
+                        </p>
+
+                        <hr class="my-4">
+
+                        <h3>The Agitation — What It Feels Like</h3>
+                        <ul>
+                            <li>Sales says marketing isn’t sending quality leads.</li>
+                            <li>Marketing says sales doesn’t follow the process.</li>
+                            <li>Ops spends hours chasing data — not improving it.</li>
+                            <li>Forecast calls turn into guesswork and caveats.</li>
+                            <li>Leadership knows growth is possible… but can’t prove it.</li>
+                        </ul>
+
+                        <hr class="my-4">
+
+                        <h3>The Shift — Where You Could Be in 90 Days</h3>
+                        <p>
+                            Imagine opening your CRM and immediately seeing:
+                        </p>
+                        <ul>
+                            <li>Which GTM motion is really driving revenue</li>
+                            <li>Where deals are slowing — and how to fix them</li>
+                            <li>Lifecycle clarity across marketing, sales & CS</li>
+                            <li>A funnel with hygiene, cadence, and accountability</li>
+                            <li>Data you can finally trust — to make real decisions</li>
+                        </ul>
+
+                        <p class="mt-4">
+                            That’s what RevOps is supposed to do.
+                            Not dashboards. Not theory. <strong>Operational clarity that drives revenue.</strong>
+                        </p>
+
+                        <div class="text-center mt-4">
+                            <button class="btn btn-primary" data-scroll="#lead-form" data-track="pain-cta">
+                                Show Me What the Audit Looks Like
+                            </button>
+                        </div>
+
+                        <button class="btn btn-outline-secondary d-none" data-scroll="#lead-form">
+                            90 Days. Full RevOps Reset. Show Me How.
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===========================
+                 45-MINUTE REVOPS AUDIT
+            ============================ -->
+            <section id="audit" class="section">
+                <div class="innercontainer py-5">
+                    <h2>The 45-Minute RevOps Audit</h2>
+                    <p>
+                        This isn’t a generic discovery call. In 45 minutes we run a focused diagnostic of your revenue engine —
+                        mapping friction, data gaps, handoff issues, and tool bloat.
+                        You leave with clarity, not questions.
+                    </p>
+
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <h4>What We Cover</h4>
+                            <ul>
+                                <li>Lead flow & lifecycle clarity (MQL → SQL → Closed Won)</li>
+                                <li>Pipeline friction & stage conversion leaks</li>
+                                <li>Sales / Marketing / CS handoff issues</li>
+                                <li>Tool sprawl & operational redundancies</li>
+                                <li>Data integrity & dashboard reliability</li>
+                                <li>Where your real leverage points are hiding</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h4>What You Get Within 48 Hours</h4>
+                            <ul>
+                                <li><strong>Summary Memo</strong> – key friction points + quick wins</li>
+                                <li><strong>Architecture Sketch</strong> – tool & data map</li>
+                                <li><strong>Revenue Friction Map</strong> – where deals slow or die</li>
+                                <li><strong>90-Day RevOps Rebuild Preview</strong> (no obligation)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- bullet points + deliverable placeholders -->
+                    <div class="text-center mt-4">
+                        <img src="/images/RevOpsAudit.png" alt="RevOps Audit Diagram" loading="lazy" style="max-width:600px;">
+                        <p class="small text-muted">Illustrative placeholder — final diagrams are tailored to your GTM model.</p>
+                    </div>
+                    <div class="text-center mt-5">
+                        <button class="btn btn-primary btn-lg" data-scroll="#lead-form" data-track="audit-cta">
+                            Book the RevOps Audit
+                        </button>
+                        <p class="small text-muted mt-2">If we’re not a fit, you still keep the diagnostic roadmap. Zero obligation.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===========================
+                 90-DAY SYSTEM REBUILD TIMELINE
+            ============================ -->
+            <section id="timeline" class="section">
+                <div class="innercontainer py-5">
+                    <h2>The 90-Day RevOps Rebuild</h2>
+                    <p>
+                        Once we locate the friction, we rebuild the system.
+                        Not theory. Not static playbooks. A sprint-based operational rebuild — built for execution.
+                    </p>
+
+                    <div class="timeline mt-4">
+
+                        <!-- PHASE 1 -->
+                        <div class="timeline-phase" id="phase1">
+                            <h4>Phase 1 – Discovery & Diagnostics</h4>
+                            <span>Weeks 1–2</span>
+                            <ul>
+                                <li>Data integrity review & hygiene assessment</li>
+                                <li>Funnel mapping & lifecycle definitions</li>
+                                <li>Quick-win fixes (low effort, high impact)</li>
+                                <li>CRM compliance & usage checks</li>
+                                <li>Stakeholder alignment on success metrics</li>
+                            </ul>
+                        </div>
+
+                        <!-- PHASE 2 -->
+                        <div class="timeline-phase" id="phase2">
+                            <h4>Phase 2 – Foundation & Flow Repair</h4>
+                            <span>Weeks 3–4</span>
+                            <ul>
+                                <li>Pipeline stage definitions & guardrails</li>
+                                <li>MQL → SQL lead handoff process</li>
+                                <li>Lead routing logic & SLA enforcement</li>
+                                <li>Tool rationalization (keep / fix / replace)</li>
+                                <li>Rep enablement assets for adoption</li>
+                            </ul>
+                        </div>
+
+                        <!-- PHASE 3 -->
+                        <div class="timeline-phase" id="phase3">
+                            <h4>Phase 3 – System Build & Integration</h4>
+                            <span>Weeks 5–8</span>
+                            <ul>
+                                <li>CRM config & automation builds</li>
+                                <li>Integration fixes across GTM tools</li>
+                                <li>Dashboard v1: pipeline, coverage, velocity</li>
+                                <li>Reporting operating cadence</li>
+                                <li>Enablement & process rollouts</li>
+                            </ul>
+                        </div>
+
+                        <!-- PHASE 4 -->
+                        <div class="timeline-phase" id="phase4">
+                            <h4>Phase 4 – Handoff & Performance Layer</h4>
+                            <span>Weeks 9–12</span>
+                            <ul>
+                                <li>Final QA on lifecycle & routing logic</li>
+                                <li>Forecasting & revenue coverage model</li>
+                                <li>Team training (live + recorded)</li>
+                                <li>Playbooks & adoption materials</li>
+                                <li>Operational handover or fractional support</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <!-- ADD ONLY IF YOU HAVE A REAL TIMELINE VISUAL -->
+                    <!--<div class="text-center mt-5  ">
+                        <img src="/images/90-day-timeline.png" alt="RevOps 90-Day Timeline" loading="lazy" style="max-width:650px;">
+                    </div>-->
+
+                </div>
+            </section>
+
+            <!-- ===========================
+                 OUTCOMES & SOCIAL PROOF
+            ============================ -->
+            <section id="outcomes" class="section">
+                <div class="innercontainer py-5">
+                    <h2>What Starts to Improve</h2>
+                    <p>
+                        When RevOps works, it shows up fast — not in theory, but in execution.
+                        Across SaaS and ecommerce teams, the same patterns emerge once the system is fixed:
+                    </p>
+
+                    <ul class="outcomes-list mt-3">
+                        <li>Faster deal cycles — fewer stalls and stage orphaning</li>
+                        <li>Smoother handoffs between Marketing, Sales & CS</li>
+                        <li>Clear funnel visibility across every GTM motion</li>
+                        <li>Tool overlap reduced — decisions made with confidence</li>
+                        <li>Lifecycle definitions finally enforced and understood</li>
+                        <li>Dashboard clarity: “what’s actually working” becomes answerable</li>
+                        <li>Forecasts that leadership can defend without disclaimers</li>
+                    </ul>
+
+                    <p class="mt-4">
+                        These outcomes are not hypothetical — they appear when systems and habits align.
+                        RevOps is not overhead. It's leverage.
+                    </p>
+
+                    <div class="text-center mt-5">
+                        <button class="btn btn-primary btn-lg" data-scroll="#lead-form" data-track="outcomes-cta">
+                            Book the RevOps Audit
+                        </button>
+                    </div>
+
+                    <div class="mt-5">
+                        <h3>Why Teams Choose Cerebral Ops vs. DIY RevOps</h3>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered mt-3">
+                                <thead>
+                                    <tr>
+                                        <th>Option</th>
+                                        <th>Pros</th>
+                                        <th>Cons</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Hire RevOps Full-Time</td>
+                                        <td>Embedded, long-term owner</td>
+                                        <td>6+ months to hire & onboard, $180K+ all-in</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DIY as Founder</td>
+                                        <td>Low cost</td>
+                                        <td>Slow, error-prone execution – inconsistent across teams</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Traditional Consultants</td>
+                                        <td>Strategy & documentation</td>
+                                        <td>No integration or execution – “you still need to build it”</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Cerebral Ops</strong></td>
+                                        <td>Strategy + tech + execution</td>
+                                        <td>Designed for teams ready to act</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="text-center mt-5">
+                        <button class="btn btn-outline-secondary" data-scroll="#lead-form" data-track="outcomes-cta">
+                            Show Me What Our Audit Would Find
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- OPTIONAL -->
+            <!--<section id="testimonials-section" class="mt-5">-->
+            <!-- Will auto-hide via JS if [[TESTIMONIALS_JSON]] not provided -->
+            <!--<div class="testimonial" data-index="0">
+                <p>“We didn’t need more leads — we needed real funnel clarity. Within weeks we could finally see where deals were getting stuck.”</p>
+                <div class="author">Founder – B2B SaaS Company</div>
+            </div>-->
+            <!-- Additional testimonials can be added here -->
+            <!--</section>
+
+            <section id="case-studies-section" class="container py-5">-->
+            <!-- [[CASE_STUDIES_HTML]] -->
+            <!--</section>-->
+
+
+            <!-- ===========================
+                 ROI CALCULATOR
+            ============================ -->
+            <section id="calculator" class="section">
+                <div class="innercontainer py-5">
+                    <h2>ROI & Uplift Calculator</h2>
+                    <p class="mb-4">
+                        This calculator uses conservative estimates based on how most RevOps rebuilds improve pipeline hygiene,
+                        conversion rates, and tool spend efficiency.
+                        Results are <strong>non-binding estimates</strong> but help clarify the decision.
+                    </p>
+
+                    <form id="roi-form" class="roi-wrapper">
+
+                        <label for="monthlyRevenue" class="form-label">Current Monthly Revenue (or Pipeline Value)</label>
+                        <input type="number" id="monthlyRevenue" class="form-control" placeholder="e.g. 50000" required>
+
+                        <label for="closeRate" class="form-label">Current Close Rate (%)</label>
+                        <input type="number" id="closeRate" class="form-control" placeholder="e.g. 18" required>
+
+                        <label for="acv" class="form-label">Average Contract Value ($)</label>
+                        <input type="number" id="acv" class="form-control" placeholder="e.g. 12000" required>
+
+                        <label for="toolSpend" class="form-label">Estimated Monthly Tool Spend ($)</label>
+                        <input type="number" id="toolSpend" class="form-control" placeholder="e.g. 2200" required>
+
+                        <button type="button" class="btn btn-primary w-100 mt-3" onclick="initROICalc();" data-track="calculator-submit">
+                            Calculate Estimated Uplift
+                        </button>
+
+                        <div class="roi-output mt-4"></div>
+
+                    </form>
+
+                    <p class="small text-muted mt-3">
+                        These estimates are directional. Actual uplift depends on GTM maturity, team adoption, and execution cadence.
+                    </p>
+
+                    <div class="text-center mt-4">
+                        <button class="btn btn-outline-secondary" data-scroll="#lead-form" data-track="calculator-cta">
+                            Run the Numbers With Us → Free 20-min RevOps Call
+                        </button>
+                    </div>
+
+                    <details class="mt-4">
+                        <summary>How We Estimate Uplift Range</summary>
+                        <p>
+                            Most RevOps rebuilds improve conversion, forecast accuracy, and reduce tool waste.
+                            This calculator uses industry-safe assumptions:
+                        </p>
+                        <ul>
+                            <li>Pipeline hygiene improves close rate by 5–20%</li>
+                            <li>Structured handoffs speed deal cycles</li>
+                            <li>Cleaner data reduces spend on unused tools</li>
+                            <li>Lifecycle visibility reveals new revenue pockets</li>
+                        </ul>
+                        <p class="mt-2"><strong>No guarantees — but patterns repeat across teams.</strong></p>
+                    </details>
+                </div>
+
+            </section>
+
+            <!-- ===========================
+                 OFFER DETAILS + RISK REVERSAL
+            ============================ -->
+            <section id="offer-details" class="section">
+                <div class="innercontainer py-5">
+                    <h2>How the Engagement Works</h2>
+                    <p>
+                        This isn’t an open-ended consulting engagement. It’s a structured,
+                        sprint-based RevOps rebuild with clear checkpoints and decision gates.
+                    </p>
+
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <h4>Working Format</h4>
+                            <ul>
+                                <li>Weekly working sessions with GTM/Ops leads</li>
+                                <li>Async updates in shared workspace</li>
+                                <li>System changes documented and recorded</li>
+                                <li>Access to all diagrams, definitions & processes</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h4>Stakeholder Alignment</h4>
+                            <ul>
+                                <li>Kickoff with leadership + GTM owners</li>
+                                <li>Clear success metrics agreed up front</li>
+                                <li>Phased review checkpoints (no blank checks)</li>
+                                <li>Work remains yours — no dependency creation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="guarantee" class="mt-5">
+                        <h3>Risk-Free Decision</h3>
+                        <p>
+                            We don’t believe in pressure. If we’re not a fit after the audit,
+                            <strong>you keep the roadmap — no payment beyond the audit itself.</strong>
+                        </p>
+                        <p>
+                            Need internal buy-in first? We'll provide a <em>stakeholder-ready deck</em>
+                            you can use to secure alignment without extra cost.
+                        </p>
+                    </div>
+
+                    <div class="mt-5">
+                        <h4>What Happens After You Book</h4>
+                        <ol>
+                            <li>You pick an audit slot (45 min)</li>
+                            <li>You receive a prep checklist — no PII required</li>
+                            <li>We run the RevOps diagnostic</li>
+                            <li>You receive findings + priority actions</li>
+                            <li>Decision gate: proceed with rebuild or keep findings</li>
+                        </ol>
+                    </div>
+
+                    <div id="pricing-note" class="mt-4">
+                        <p><strong>Pricing:</strong> </p>
+                        <p class="small">
+                            Final scope is quoted upfront — no surprises, no retainers.
+                        </p>
+                    </div>
+                    <div class="text-center mt-5">
+                        <button data-scroll="#lead-form" class="btn btn-primary btn-lg" data-track="offer-cta">
+                            Show Me What Our Audit Would Find
+                        </button>
+                        <p class="small text-muted mt-2">
+                            If the audit isn’t valuable, you don’t continue. That simple.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===========================
+                 PRICING (OPTIONAL)
+            ============================ -->
+            <section id="pricing-section" class="section">
+                <div class="innercontainer py-5">
+                    <h2>Pricing & Formats</h2>
+                    <h2>The Real Cost of Not Fixing RevOps</h2>
+                    <p>
+                        Most teams don’t lose revenue because of strategy — they lose it through friction:
+                        slow handoffs, unclear stages, bad data, and tools that don’t follow process.
+                        One fix usually pays for the whole rebuild.
+                    </p>
+
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <h4>Where Revenue Leaks:</h4>
+                            <ul>
+                                <li>Lead response time too slow</li>
+                                <li>Pipeline stages not enforced</li>
+                                <li>Conversion happening outside the CRM</li>
+                                <li>Forecasting depends on “gut feel”</li>
+                                <li>Tool overlap, no single source of truth</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h4>What RevOps Generates:</h4>
+                            <ul>
+                                <li>Cleaner data → stronger decisions</li>
+                                <li>Faster deal velocity & higher confidence</li>
+                                <li>Operational alignment across GTM</li>
+                                <li>Visibility: what’s working vs what’s noise</li>
+                                <li>Predictable revenue — not heroic effort</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-dark mt-4">
+                        <strong>We don’t guess. We install processes that can be measured.</strong><br>
+                        That’s what makes RevOps a growth lever — not an overhead cost.
+                    </div>
+
+                    <div class="text-center mt-5">
+                        <button class="btn btn-primary btn-lg" data-scroll="#lead-form" data-track="roi-pricing-cta">
+                            See What Your 90-Day Plan Would Look Like
+                        </button>
+                    </div>
+
+                    <h2 class="mt-5">Pricing & Formats</h2>
+                    <p>
+                        Every engagement starts with the RevOps Audit. After that,
+                        you decide whether to continue into the rebuild.
+                        No retainers. No blank checks.
+                    </p>
+
+                    <div class="table-responsive mt-4">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Format</th>
+                                    <th>Timeframe</th>
+                                    <th>Best For</th>
+                                    <th>Starting At*</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Paid RevOps Audit</td>
+                                    <td>45-min live + 2-day deliverables</td>
+                                    <td>Seed–Series A</td>
+                                    <td>[[PRICING_TEXT]]</td>
+                                </tr>
+                                <tr>
+                                    <td>90-Day RevOps Rebuild</td>
+                                    <td>12 Weeks (execution sprints)</td>
+                                    <td>$1–$10M ARR / scaling GTM teams</td>
+                                    <td>[[PRICING_TEXT]]</td>
+                                </tr>
+                                <tr>
+                                    <td>Fractional RevOps Support</td>
+                                    <td>6+ Months</td>
+                                    <td>Growing SaaS / structured GTM</td>
+                                    <td>[[PRICING_TEXT]]</td>
+                                </tr>
+                                <tr>
+                                    <td>Data & Dashboard Layer</td>
+                                    <td>4–6 Weeks</td>
+                                    <td>Sales / Growth teams</td>
+                                    <td>[[PRICING_TEXT]]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="small text-muted">
+                            *Final scope always quoted upfront. No hidden costs.
+                        </p>
+                    </div>
+                    <div class="mt-5 p-4 border rounded bg-light">
+                        <h3>Starter Option: Guided RevOps Audit</h3>
+                        <p>
+                            90 minutes, live with your GTM team.
+                            Within 3 days you receive a maturity scorecard + 90-day roadmap.
+                        </p>
+                        <p><em>Cost: credited toward the full Sprint if you continue.</em></p>
+                        <button class="btn btn-outline-primary mt-2" data-scroll="#lead-form" data-track="guided-audit-cta">
+                            See If the Guided Audit Is a Fit →
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ===========================
+                 FAQ
+            ============================ -->
+            <section id="faq" class="section">
+                <div class="innercontainer py-5">
+                    <h2>Frequently Asked Questions</h2>
+
+                    <div class="faq-item">
+                        <h5>Do we need to give CRM access before the call?</h5>
+                        <div class="faq-answer">
+                            No. The audit uses screenshots and summary data only. GDPR and CCPA safe.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h5>Will this disrupt our current GTM or sales process?</h5>
+                        <div class="faq-answer">
+                            No hard resets. We start with observation and quick wins, not rebuilds.
+                            Most teams feel improvements within the first 2 weeks — without any operational risk.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h5>Do you work with HubSpot, Salesforce, or Klaviyo?</h5>
+                        <div class="faq-answer">
+                            Yes. The framework is tool-agnostic. We install definitions and standards first—
+                            the tech follows the system, not the other way around.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h5>What if our data is messy?</h5>
+                        <div class="faq-answer">
+                            That’s usually when RevOps has the biggest leverage.
+                            Data doesn’t need to be perfect — it just needs to be structured enough to act on.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h5>What happens if we don’t move forward after the Audit?</h5>
+                        <div class="faq-answer">
+                            You keep everything — findings, roadmap, friction map, architecture sketch.
+                            No penalty. We believe clarity earns trust.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h5>How do you measure success?</h5>
+                        <div class="faq-answer">
+                            We align on success metrics before kickoff and track them weekly.
+                            Conversion, velocity, forecast confidence, and revenue coverage are common metrics.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h5>What if leadership needs proof before we decide?</h5>
+                        <div class="faq-answer">
+                            We’ll provide a stakeholder-ready slide deck after the audit,
+                            so you can secure internal alignment before committing to the rebuild.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h5>Can this replace a full-time RevOps hire?</h5>
+                        <div class="faq-answer">
+                            For many teams — yes. The 90-day sprint installs working systems and clarity
+                            before a permanent hire is even necessary. We can also help define that hiring scope.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h5>When will we see ROI?</h5>
+                        <div class="faq-answer">
+                            Most teams feel operational relief in 2 weeks,
+                            and measurable revenue clarity within 4–6 weeks.
+                            The full rebuild lasts 90 days — execution-focused.
+                        </div>
+                    </div>
+                    <div class="text-center mt-5">
+                        <button class="btn btn-primary btn-lg" data-scroll="#lead-form" data-track="faq-cta">
+                            I am ready to see where my Revenue Is Stuck
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ===========================
+                 FINAL CTA
+            ============================ -->
+            <section id="final-cta" class="section">
+                <div class="innercontainer py-5 text-center">
+                    <h2>Ready to Fix Your Revenue Engine?</h2>
+                    <p>Your tools and teams already know the truth. Let’s make it usable.</p>
+                    <button data-scroll="#lead-form" class="btn btn-primary btn-lg" data-track="final-cta">
+                        Book Your RevOps Audit
+                    </button>
+                </div>
+            </section>
+
+            <section id="final-cta2" class="section">
+                <div class="innercontainer py-5 text-center">
+
+                    <div class="mt-4">
+                        <h2>Your Team Is Already Working Hard.</h2>
+                        <p class="lead mt-3">
+                            Let’s make their effort compound — not evaporate in systems that don’t support execution.
+                        </p>
+
+                        <p class="mt-2">
+                            Fixing RevOps isn’t about tools. It’s about clarity, cadence, and operational leverage.
+                            Once those exist — revenue moves differently.
+                        </p>
+
+                        <button class="btn btn-primary btn-lg mt-4" data-scroll="#lead-form" data-track="final-cta">
+                            Book Your RevOps Audit
+                        </button>
+
+                        <p class="small text-muted mt-3">
+                            If we’re not a fit after the audit, you keep every finding. No commitment required.
+                        </p>
+                    </div>
+                    <div class="mt-4">
+                        <button class="btn btn-outline-secondary" data-track="secondary-cta" data-scroll="#lead-form">
+                            Show Me the Prep Checklist First
+                        </button>
+                    </div>
+
+                    <div id="floating-cta" class="d-none">
+                        <p>Not sure yet?<br><strong>See what the Audit uncovers.</strong></p>
+                        <button data-scroll="#lead-form" class="btn btn-primary btn-sm">Explore the Audit</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===========================
+                 LEAD FORM
+            ============================ -->
+            <section id="lead-form" class="container py-5">
+                <h2 class="text-center">Book Your RevOps Audit</h2>
+                <p class="text-center mb-4">
+                    We’ll review your GTM flow and show where revenue is stalling.
+                    No commitment unless you choose to continue.
+                </p>
+
+                <form id="lead-form" name="lead-form" action="../send.php" method="POST">
+
+                    <!-- Name -->
+                    <div class="mb-3">
+                        <label class="form-label">Full Name*</label>
+                        <input type="text" id="fullname" name="fullname" class="form-control" value="" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label class="form-label">Work Email*</label>
+                        <input type="email" id="email" name="email" class="form-control" value="" required>
+                    </div>
+
+                    <!-- LinkedIn -->
+                    <div class="mb-3">
+                        <label class="form-label">LinkedIn URL*</label>
+                        <input type="text" id="linkedin" name="linkedin" class="form-control" value="" required>
+                    </div>
+
+                    <!-- Company -->
+                    <div class="mb-3">
+                        <label class="form-label">Company Name*</label>
+                        <input type="text" id="company" name="company" class="form-control" value="" required>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="mb-3">
+                        <label class="form-label">Phone*</label>
+                        <input type="tel" id="phone" name="phone" required class="form-control" placeholder="+1 (xxx) xxx-xxxx" value="">
+                    </div>
+
+
+                    <!-- Message -->
+                    <div class="mb-3">
+                        <label class="form-label">What’s slowing down growth right now?</label>
+                        <textarea id="challenge" name="challenge" class="form-control" rows="4" required placeholder="for example: Our processes are too slow."></textarea>
+                    </div>
+
+
+                    <!-- GDPR / Consent -->
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="consent" required>
+                        <label for="consent" class="form-check-label small">
+                            I agree to allow Cerebral Ops to contact me regarding this inquiry and store my submitted information for this purpose.
+                        </label>
+                    </div>
+
+                     <!--Honeypot--> (spam prevention) 
+                    <input type="text" id="hp-field" name="hp-field" style="display:none;" aria-hidden="true">
+                     <!--UTM--> Payload (auto-filled by JS) 
+                    <input type="hidden" name="utm_payload">
+
+                    <!-- Subject -->
+                    <input type="hidden" name="subject" value="RevOps Audit Booking Request">
+                    <input type="text" name="emailcontent" class="hiddencontent" style="height:0;width:0;border-color:White;" value="" />
+
+
+                    <!-- Submit -->
+                    <button type="submit" class="btn btn-primary w-100" data-track="lead-form-submit">
+                        Send Request → Get Audit Prep Checklist
+                    </button>
+
+                </form>
+
+            </section>
+
+            <section id="done-section" class="section  success-message">
+                <div>
+                    <div class="innercontainer">
+                        <div class="success-icon">
+                            <i class="fas fa-check-cicle"></i>
+                        </div>
+                        <h4> Your message is on its way! </h4>
+                        <p>
+                            Hi, Your message is on it's way to us. We respond to all messages within 2 business days!
+                        </p>
+                        <p>
+                            Note:If you haven't heard back from us by Day #3, something has drastically gone wrong!
+                        </p>
+                        <p>
+                            Ok, just kidding! But, on the off-chance that we actually missed your message;
+                            please do intimate us and we will take care of you!
+                        </p>
+                        <p>
+                            And we'll throw in something extra for your troubles!
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===========================
+                 FOOTER
+            ============================ -->
+            <footer class="site-footer">
+                <nav>
+                    <a href="[[PRIVACY_URL]]">Privacy</a> |
+                    <a href="[[TERMS_URL]]">Terms</a>
+                </nav>
+
+                <div class="container">
+
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h5>Cerebral Ops</h5>
+                            <p class="small">
+                                RevOps consulting for B2B SaaS, ecommerce, and tech-enabled services.
+                                We turn scattered GTM systems into predictable revenue engines.
+                            </p>
+                            <p class="small mb-0"><strong>Contact:</strong> <a href="mailto:hello@cerebralops.in">hello@cerebralops.in</a></p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <h6>Company</h6>
+                            <ul class="list-unstyled small">
+                                <li><a href="[[PRIVACY_URL]]">Privacy Policy</a></li>
+                                <li><a href="[[TERMS_URL]]">Terms of Service</a></li>
+                                <li><a href="[[COOKIE_POLICY_URL]]">Cookie Policy</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-3">
+                            <h6>Find Us</h6>
+                            <ul class="list-unstyled small">
+                                <li><a href="https://www.linkedin.com/company/cerebralops/" target="_blank">LinkedIn</a></li>
+                                <li><a href="https://twitter.com/cerebralops" target="_blank">Twitter</a></li>
+                                <li><a href="mailto:contact@cerebralops.in">Email Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <hr class="border-light">
+
+                    <div class="row">
+                        <div class="col-md-6 small">
+                            © <span id="year"></span> Cerebral Ops. All rights reserved.
+                        </div>
+
+                        <div class="col-md-6 text-md-end small">
+                            <a href="#hero" data-scroll>Back to top ↑</a>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+        </div>
+
+    </div>
+    <!-- JS FILES LOADED LAST -->
+    <script src="revops-audit.js" defer></script>
+    <script src="revops-analytics.js" defer></script>
+
+
+    <script type="text/javascript">
+
+
+        document.getElementById('lead-form')
+            .addEventListener('submit', function (e) {
+
+                /*************************************************** */
+                /* Completely avoid trying to submit this stupid form */
+                // Prevent default form submission initially
+                //     e.preventDefault();
+
+                /******************************************************* */
+               
+
+                //         Get values from text fields
+                const fname = document.getElementById('fullname')?.value || '';
+                const linkedin = document.getElementById('linkedin')?.value || '';
+                const email = document.getElementById('email')?.value || '';
+                const company = document.getElementById('company')?.value || '';
+                const phone = document.getElementById('phone')?.value || '';
+                const challenge = document.getElementById('challenge')?.value || '';
+
+                const hcontent = `
+                 Name: ${fname}
+                 <br/>LinkedIn: ${linkedin}
+                 <br/>Email: ${email}
+                 <br/>Company: ${company}
+                 <br/>Phone: ${phone}
+                 <br/>Challenge: ${challenge}
+                     `.trim();
+
+                //const hiddenField = '';
+                document.getElementsByName('emailcontent')[0].value=hcontent;
+               
+                //if (!hiddenField) {
+                //    alert('no field');
+                //}
+                return true;
+
+              //  alert(content);
+
+              ////✅ Safely set hidden field value
+               
+                //if (hiddenField) {
+                //    hiddenField.value = content;
+                //    return true;
+                //} else {
+                //    console.error('Hidden field not found! Make sure you have: <input type="hidden" id="emailcontent">');
+                //    return false; // Stop submission if hidden field missing
+                //}
+               // return true;
+            });
+
+
+    </script>
+
+    <script type="text/javascript">
+        var urlstring = window.location.href;
+        var url = new URL(urlstring);
+        var status = url.searchParams.get("status");
+        if (status == 'emailed') {
+            //alert(status);
+            const leadform = document.getElementById('lead-form');
+            leadform.style.display = 'none';
+
+            const element = document.getElementById('done-section');
+            element.style.display = 'block';
+
+            const element1 = document.getElementById('done-section1');
+            element1.style.display = 'block';
+        }
+        else {
+
+            console.log('status =' + status);
+            const donesection = document.getElementById('done-section');
+            donesection.style.display = 'none';
+
+            const donesection1 = document.getElementById('done-section1');
+            donesection1.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+<!--{
+   "@type": "Review",
+   "reviewBody": "Working with Cerebral Ops finally gave us dashboard clarity and a faster sales cycle.",
+   "author": { "@type": "Person", "name": "Founder – SaaS company" },
+   "itemReviewed": { "@id": "https://cerebralops.in/#revops-service" }
+   }-->
+<!-- To validate → paste FULL JSON-LD into: https://search.google.com/test/rich-results -->

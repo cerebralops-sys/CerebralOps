@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Cerebral Ops - The Brain Work Agency</title>
+    <script src="../components/header.js" type="text/javascript"></script>
+</head>
+
+<body>
+    
+  <div id="header"></div>
+    <div id="pagecontent" style="min-height:1000px;">&nbsp;</div>
+  <div id="footer"></div>
+
+  <script>
+    fetch('/components/header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header').innerHTML = data)
+          .catch(err => console.error('Nav Header load failed:', err));
+
+    fetch('/components/footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('footer').innerHTML = data)
+      .catch(err => console.error('Footer load failed:', err));
+
+</script>
+      <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+   <script type="text/javascript" src="../js/common.js"></script>
+ <script type="text/javascript" src="js/index.js"></script>
+  
+</body>
+</html>
+
+<!--<form id="cogaForm" action="send.php" method="POST">-->
+    <!-- Hidden fields for form submission -->
+    <!--<input type="hidden" id="hiddenName" name="name" value="testname">
+    <input type="hidden" id="hiddenEmail" name="email" value="testemail@hotmail.com">
+    <input type="hidden" id="hiddenPhone" name="phone" value="testphone">
+    <input type="hidden" id="hiddenContent" name="emailcontent" value="testemailcontent">
+
+    <button type="submit" class="submit-btn">Submit Application</button>
+</form>-->
+   
+
+<!--<div id="divEmailed">
+    Great, thank you!
+</div>-->
+<!--<script type="text/javascript">
+    var urlstring = window.location.href;
+    var url = new URL(urlstring);
+    var status = url.searchParams.get("status");
+    if (status == 'Emailed') {
+        //alert(status);
+        const element = document.getElementById('divEmailed');
+        element.style.display = 'block';
+        element.innerHTML = " Great job";
+    }
+</script>-->
+

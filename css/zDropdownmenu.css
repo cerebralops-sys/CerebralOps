@@ -1,0 +1,89 @@
+/* ===========================
+   Enhanced Navigation with Scroll Effects
+   =========================== */
+.navbar {
+    padding: 1rem 0; /* Default padding */
+    background-color: var(--dark-bg);
+    transition: all 0.4s ease;
+    min-height: 80px; /* Default height */
+}
+
+    .navbar.scrolled {
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        padding: 0.25rem 0; /* Reduced padding when scrolled */
+        min-height: 50px; /* Shrunk height */
+    }
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    transition: all 0.4s ease;
+}
+
+/* Logo styling */
+.navbar-logo {
+    height: 40px;
+    width: auto;
+    margin-right: 0.75rem;
+    transition: all 0.4s ease;
+    opacity: 1;
+}
+
+/* Hide logo when scrolled */
+.navbar.scrolled .navbar-logo {
+    height: 0;
+    margin-right: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+/* Adjust brand text size when scrolled */
+.navbar.scrolled .navbar-brand {
+    font-size: 1.25rem;
+}
+
+/* Nav links adjustment */
+.nav-link {
+    color: var(--primary-color) !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0.75rem !important;
+}
+
+.navbar.scrolled .nav-link {
+    padding: 0.25rem 0.75rem !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 991px) {
+    .navbar {
+        min-height: 70px;
+    }
+
+        .navbar.scrolled {
+            min-height: 50px;
+        }
+
+    .navbar-logo {
+        height: 35px;
+    }
+
+    /* Keep logo visible on mobile even when scrolled */
+    .navbar.scrolled .navbar-logo {
+        height: 28px;
+        opacity: 1;
+        margin-right: 0.5rem;
+    }
+
+    /* Navbar menu items - don't shrink on mobile */
+    .navbar-collapse {
+        margin-top: 0.5rem;
+    }
+
+    .navbar.scrolled .navbar-collapse {
+        margin-top: 0.25rem;
+    }
+}

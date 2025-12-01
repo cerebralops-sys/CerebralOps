@@ -1,0 +1,148 @@
+﻿/* Cerebral Ops Quiz Styling */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --accent-color: #3b82f6;
+    --second-accent: #FFC55A;
+    --dark-bg: #0f172a;
+    --darker-bg: #020617;
+    --text-light: #f1f5f9;
+    --text-gray: #cbd5e1;
+    --card-bg: #1e293b;
+    --border-color: #334155;
+}
+
+.page-section{
+    padding-top:10rem;
+}
+
+.quiz-container {
+    max-width: 1000px;
+    margin: 10px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Or your site font */
+    color: var(--text-light);
+}
+
+/* Progress Bar */
+.progress-wrapper {
+    background-color: var(--darker-bg);
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--accent-color);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* Card Design */
+.quiz-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* Context Section (The "Why") */
+.context-box {
+    background-color: rgba(37, 99, 235, 0.1); /* Low opacity primary */
+    border-left: 4px solid var(--second-accent);
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+}
+
+.context-text {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    font-style: italic;
+    margin: 0;
+}
+
+.question-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--text-light);
+}
+
+/* Options */
+.options-grid {
+    display: grid;
+    gap: 15px;
+}
+
+.option-btn {
+    background-color: var(--darker-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+    padding: 15px 20px;
+    text-align: left;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+}
+
+    .option-btn:hover {
+        border-color: var(--accent-color);
+        background-color: var(--secondary-color);
+    }
+
+    .option-btn.selected {
+        background-color: var(--primary-color);
+        border-color: var(--accent-color);
+        font-weight: bold;
+    }
+
+/* Navigation */
+.nav-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-btn {
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-prev {
+    background-color: transparent;
+    color: var(--text-gray);
+    border: 1px solid var(--border-color);
+}
+
+.btn-next {
+    background-color: var(--second-accent);
+    color: var(--darker-bg);
+}
+
+    .btn-next:hover {
+        background-color: #ffd68a;
+    }
+
+/* Lead Form (Hidden initially) */
+.lead-form-container {
+    display: none;
+    text-align: center;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: var(--darker-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+    border-radius: 6px;
+}

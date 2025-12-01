@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36121.58 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "CerebralOps", "CerebralOps.phpproj", "{4D398FE2-5A42-37D3-BB67-45B51D4FD48A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D398FE2-5A42-37D3-BB67-45B51D4FD48A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D398FE2-5A42-37D3-BB67-45B51D4FD48A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D398FE2-5A42-37D3-BB67-45B51D4FD48A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D398FE2-5A42-37D3-BB67-45B51D4FD48A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0DFAA06-6921-424B-9F0D-AA5BE05774E1}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Thank you ! - Cerebral Ops</title>
+      <script src="../components/header.js" type="text/javascript"></script>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Cerebral Ops - Strategic Growth for Startups. Strategic Advisory + Impactful Execution with Senior Expertise in Tech, Marketing, and Ops.">
+  
+</head>
+<body>
+     <!-- Navigation -->
+ <div id="header"></div>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-8 mx-auto text-center hero-content">
+                    <h1 class="hero-title fade-in">Thank you! </h1>
+                    <p class="hero-subtitle fade-in-delay">
+                        from all of us here at Cerebral Ops. <br/>
+                    </p>
+                    <p>
+                        We respond to all business communication  ASAP. You will hear from us within 2 days!
+                    </p>
+
+                    <p class="hero-description fade-in-delay-2">
+                        Efficiency & Productivity Audit  <br />
+                        followed by 90 day Revenue Ops & Growth Systems Rebuild <br />
+                        With AI & Automation Built-In <br />
+                    </p>
+                    <div class="hero-rating fade-in-delay-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span class="ms-2">Rated 5 Stars</span>
+                    </div>
+                    <div class="hero-cta fade-in-delay-4">
+                        <a href="/products/revops-audit.html" class="btn btn-primary btn-lg me-3">Call for a Free Audit</a>
+                        <a href="services.html" class="btn btn-outline-light btn-lg">Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>-->
+    </section>
+
+ 
+
+
+      <!-- footer -->
+    <div id="footer"></div>
+
+    <script>
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data)
+            .catch(err => console.error('Nav Header load failed:', err));
+
+        fetch('/components/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data)
+            .catch(err => console.error('Footer load failed:', err));
+
+    </script>
+   
+         <!--Bootstrap JS-- >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <!--jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+      
+    <!-- Custom JS -->
+    <script src="../js/index.js"></script>
+    <script src="js/common.js"></script>
+</body>
+    
+</html>
+
+
+

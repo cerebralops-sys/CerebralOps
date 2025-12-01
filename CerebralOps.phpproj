@@ -1,0 +1,16 @@
+﻿<Project Sdk="Devsense.Php.Sdk">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>4d398fe2-5a42-37d3-bb67-45b51d4fd48a</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnvName>IISExpress</EnvName>
+    <RuntimeVersion>8.2</RuntimeVersion>
+    <SaveServerSettingsInUserFile>false</SaveServerSettingsInUserFile>
+    <PHPDevHostName>localhost</PHPDevHostName>
+    <PHPDevAutoPort>true</PHPDevAutoPort>
+    <PHPDevRouting />
+    <PHPDevPort>9004</PHPDevPort>
+    <SpecificPageValue>index.php</SpecificPageValue>
+    <StartAction>SpecificPage</StartAction>
+  </PropertyGroup>
+</Project>
